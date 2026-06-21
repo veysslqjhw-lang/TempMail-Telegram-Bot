@@ -13,24 +13,6 @@ from telegram.ext import (
 MAIL_TM_API = "https://api.mail.tm"
 user_sessions = {}
 ADMIN_IDS = [7315317975]  # Replace with your Telegram user ID
-REQUIRED_CHANNEL = "https://t.me/kgsssfhhj"
-
-def random_str(length=10):
-    return ''.join(random.choices(string.ascii_lowercase + string.digits, k=length))
-
-async def check_membership(user_id, context):
-    try:
-        member = await context.bot.get_chat_member(REQUIRED_CHANNEL, user_id)
-        return member.status in ["member", "creator", "administrator"]
-    except:
-        return False
-
-async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    user_id = update.effective_user.id
-    if not await check_membership(user_id, context):
-        return await update.message.reply_text(
-            f"📢 Please join our channel first:\n{REQUIRED_CHANNEL}"
-        )
 
     msg = (
         "👋 *Welcome to TempMail Bot!*\n\n"
