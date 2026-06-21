@@ -12,7 +12,7 @@ from telegram.ext import (
 
 MAIL_TM_API = "https://api.mail.tm"
 user_sessions = {}
-ADMIN_IDS = [7315317975]  # Replace with your Telegram user ID
+ADMIN_IDS = [8315317975]  # Replace with your Telegram user ID
 REQUIRED_CHANNEL = "https://t.me/kgsssfhhj"
 
 def random_str(length=10):
